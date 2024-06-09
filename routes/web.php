@@ -23,6 +23,7 @@ use App\Http\Controllers\HolidayContoller;
 use App\Http\Controllers\LiveConsultationController;
 use App\Http\Controllers\MedicineBillController;
 use App\Http\Controllers\MedicineController;
+use App\Http\Controllers\MuridController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\PatientController;
 use App\Http\Controllers\PaypalController;
@@ -409,6 +410,8 @@ Route::prefix('admin')->middleware('auth', 'xss', 'checkUserStatus')->group(func
     Route::get('/presensi', [PegawaiController::class, 'presensiIndex'])->name('presensi.index');
     Route::get('/izin', [PegawaiController::class, 'izinIndex'])->name('izin.index');
     Route::get('/cuti', [PegawaiController::class, 'cutiIndex'])->name('cuti.index');
+
+    Route::resource('murid', MuridController::class)->parameters(['murids' => 'murid']);
 });
 
 require __DIR__.'/auth.php';
