@@ -19,6 +19,7 @@ use App\Http\Controllers\Front\FrontPatientTestimonialController;
 use App\Http\Controllers\Front\SliderController;
 use App\Http\Controllers\Front\SubscribeController;
 use App\Http\Controllers\GoogleCalendarController;
+use App\Http\Controllers\GuruController;
 use App\Http\Controllers\HolidayContoller;
 use App\Http\Controllers\LiveConsultationController;
 use App\Http\Controllers\MedicineBillController;
@@ -412,6 +413,7 @@ Route::prefix('admin')->middleware('auth', 'xss', 'checkUserStatus')->group(func
     Route::get('/cuti', [PegawaiController::class, 'cutiIndex'])->name('cuti.index');
 
     Route::resource('murid', MuridController::class)->parameters(['murids' => 'murid']);
+    Route::resource('guru', GuruController::class)->parameters(['gurus' => 'guru']);
 });
 
 require __DIR__.'/auth.php';

@@ -37,10 +37,17 @@
         </a>
     </li>
 
+    <li class="nav-item {{ Request::is('admin/guru*') ? 'active' : '' }}">
+        <a class="nav-link d-flex align-items-center py-4" aria-current="page" href="{{ route('guru.index') }}">
+            <span class="aside-menu-icon pe-3"><i class="fas fa-users"></i></span>
+            <span class="aside-menu-title">Guru</span>
+        </a>
+    </li>
     <li class="nav-item {{ Request::is('admin/murid*') ? 'active' : '' }}">
         <a class="nav-link d-flex align-items-center py-4" aria-current="page" href="{{ route('murid.index') }}">
             <span class="aside-menu-icon pe-3"><i class="fas fa-users"></i></span>
             <span class="aside-menu-title">Murid</span>
         </a>
     </li>
+    
 @endcan
