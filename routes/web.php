@@ -22,6 +22,7 @@ use App\Http\Controllers\GoogleCalendarController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\HolidayContoller;
 use App\Http\Controllers\LiveConsultationController;
+use App\Http\Controllers\MataPelajaranController;
 use App\Http\Controllers\MedicineBillController;
 use App\Http\Controllers\MedicineController;
 use App\Http\Controllers\MuridController;
@@ -31,6 +32,7 @@ use App\Http\Controllers\PaypalController;
 use App\Http\Controllers\PaystackController;
 use App\Http\Controllers\PayTMController;
 use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\PelajaranController;
 use App\Http\Controllers\PrescriptionController;
 use App\Http\Controllers\PurchaseMedicineController;
 use App\Http\Controllers\RazorpayController;
@@ -414,6 +416,7 @@ Route::prefix('admin')->middleware('auth', 'xss', 'checkUserStatus')->group(func
 
     Route::resource('murid', MuridController::class)->parameters(['murids' => 'murid']);
     Route::resource('guru', GuruController::class)->parameters(['gurus' => 'guru']);
+    Route::resource('pelajaran', MataPelajaranController::class)->parameters(['gurus' => 'pelajaran']);
 });
 
 require __DIR__.'/auth.php';

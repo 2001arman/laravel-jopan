@@ -49,5 +49,11 @@
             <span class="aside-menu-title">Murid</span>
         </a>
     </li>
+    <li class="nav-item {{ Request::is('admin/pelajaran*') ? 'active' : '' }}">
+        <a class="nav-link d-flex align-items-center py-4" aria-current="page" href="{{ route('pelajaran.index') }}">
+            <span class="aside-menu-icon pe-3"><i class="fas fa-calendar-alt"></i></span>
+            <span class="aside-menu-title">Mata Pelajaran</span>
+        </a>
+    </li>
     
 @endcan
