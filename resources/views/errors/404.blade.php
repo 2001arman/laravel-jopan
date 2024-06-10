@@ -12,7 +12,7 @@
                     <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
                     <div class="clearfix mb-5">
                         <a href="{{ url()->previous() }}" class="btn btn-primary m-r5">Back</a>
-                        <a href="{{ route('medical') }}" class="btn btn-primary">Back To Home</a>
+                        <a href="{{ route('login') }}" class="btn btn-primary">Back To Home</a>
                     </div>
                 </div>
             </div>
