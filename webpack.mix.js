@@ -152,14 +152,14 @@ mix.scripts([
     'resources/theme/js/vendor.js',
     'resources/theme/js/plugins.js',
     'public/messages.js',
-    'public/assets/front/vendor/jquery.min.js',
+    // 'public/assets/front/vendor/jquery.min.js',
     'public/assets/front/vendor/magnific-popup/jquery.magnific-popup.js',
-    'public/assets/front/vendor/bootstrap.bundle.min.js',
+    // 'public/assets/front/vendor/bootstrap.bundle.min.js',
     'public/assets/front/vendor/bootstrap-select/js/bootstrap-select.min.js',
     'public/assets/js/bootstrap-datepicker/bootstrap-datepicker.js',
-    'public/assets/front/vendor/slick.min.js',
+    // 'public/assets/front/vendor/slick.min.js',
     'public/assets/front/js/contact.js',
-    'public/assets/js/custom/helper.js',
+    // 'public/assets/js/custom/helper.js',
     'node_modules/intl-tel-input/build/js/utils.js',
     'node_modules/intl-tel-input/build/js/intlTelInput.js',
     'node_modules/apexcharts/dist/apexcharts.js',
@@ -204,9 +204,10 @@ mix.sass('resources/assets/front/scss/main.scss',
 ).version()
 
 
-// front third party CSS
-mix.styles([
-    'public/assets/front/vendor/bootstrap.min.css',
-    'public/assets/front/vendor/slick.css',
-    'public/assets/front/vendor/slick-theme.css',
-], 'public/css/front-third-party.css')
+// // front third party CSS
+// mix.styles([
+//     'public/assets/front/vendor/bootstrap.min.css',
+//     'public/assets/front/vendor/slick.css',
+//     'public/assets/front/vendor/slick-theme.css',
+// ], 'public/css/front-third-party.css')
+mix.styles('resources/css/bootstrap.min.css', 'public/css/front-third-party.css');
