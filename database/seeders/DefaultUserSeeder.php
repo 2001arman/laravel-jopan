@@ -30,5 +30,8 @@ class DefaultUserSeeder extends Seeder
                 'region_code' => '91',
             ],
         ];
+        foreach ($users as $key => $user) {
+            $user = User::create($user);
+        }
     }
 }
