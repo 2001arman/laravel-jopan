@@ -15,7 +15,6 @@ class DatabaseSeeder extends Seeder
         $this->call(DefaultUserSeeder::class);
         $this->call(SettingTableSeeder::class);
         $this->call(DefaultRoleSeeder::class);
-        $this->call(DefaultCurrenciesSeeder::class);
         $this->call(AddFieldsSettingTableSeeder::class);
         $this->call(AddEmailVerifiedFieldSettingTableSeeder::class);
         $this->call(DefaultAssignPermissionSeeder::class);
