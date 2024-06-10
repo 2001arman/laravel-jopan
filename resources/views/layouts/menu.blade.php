@@ -55,5 +55,16 @@
             <span class="aside-menu-title">Mata Pelajaran</span>
         </a>
     </li>
-    
+    <li class="nav-item {{ Request::is('admin/kelas*') ? 'active' : '' }}">
+        <a class="nav-link d-flex align-items-center py-4" aria-current="page" href="{{ route('kelas.index') }}">
+            <span class="aside-menu-icon pe-3"><i class="fas fa-hospital-user"></i></span>
+            <span class="aside-menu-title">Kelas</span>
+        </a>
+    </li>
+    <li class="nav-item {{ Request::is('admin/nilai*') ? 'active' : '' }}">
+        <a class="nav-link d-flex align-items-center py-4" aria-current="page" href="{{ route('nilai.index') }}">
+            <span class="aside-menu-icon pe-3"><i class="fa-solid fa-graduation-cap"></i></span>
+            <span class="aside-menu-title">Nilai</span>
+        </a>
+    </li>
 @endcan

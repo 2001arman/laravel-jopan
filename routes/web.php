@@ -21,11 +21,13 @@ use App\Http\Controllers\Front\SubscribeController;
 use App\Http\Controllers\GoogleCalendarController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\HolidayContoller;
+use App\Http\Controllers\KelasController;
 use App\Http\Controllers\LiveConsultationController;
 use App\Http\Controllers\MataPelajaranController;
 use App\Http\Controllers\MedicineBillController;
 use App\Http\Controllers\MedicineController;
 use App\Http\Controllers\MuridController;
+use App\Http\Controllers\NilaiController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\PatientController;
 use App\Http\Controllers\PaypalController;
@@ -416,7 +418,9 @@ Route::prefix('admin')->middleware('auth', 'xss', 'checkUserStatus')->group(func
 
     Route::resource('murid', MuridController::class)->parameters(['murids' => 'murid']);
     Route::resource('guru', GuruController::class)->parameters(['gurus' => 'guru']);
-    Route::resource('pelajaran', MataPelajaranController::class)->parameters(['gurus' => 'pelajaran']);
+    Route::resource('pelajaran', MataPelajaranController::class)->parameters(['pelajarans' => 'pelajaran']);
+    Route::resource('kelas', KelasController::class)->parameters(['kelas' => 'kelas']);
+    Route::resource('nilai', NilaiController::class)->parameters(['nilai' => 'nilai']);
 });
 
 require __DIR__.'/auth.php';
