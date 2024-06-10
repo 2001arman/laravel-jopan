@@ -75,7 +75,6 @@
             'order_id': '',
             'description': '',
             'image': '{{ asset(getAppLogo()) }}', // logo here
-            'callback_url': "{{ route('razorpay.success') }}",
             'prefill': {
                 'email': '', // recipient email here
                 'name': '', // recipient name here

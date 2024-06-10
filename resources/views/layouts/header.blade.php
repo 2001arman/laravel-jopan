@@ -22,15 +22,6 @@
             </span>
         </li>
         @endImpersonating
-        <li class="px-sm-3 px-2">
-            @if(Auth::user()->dark_mode)
-                <a href="javascript:void(0)" title="Switch to Light mode"><i
-                        class="fa-solid fa-moon text-primary fs-2 apply-dark-mode"></i></a>
-            @else
-                <a href="javascript:void(0)" title="Switch to Dark mode"><i
-                        class="fa-solid fa-sun text-primary fs-2 apply-dark-mode"></i></a>
-            @endif
-        </li>
         @php
                 $notifications = getNotification();
             @endphp

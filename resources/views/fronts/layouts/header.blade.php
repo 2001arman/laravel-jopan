@@ -18,24 +18,6 @@
                             <li class="nav-item">
                                 <a class="nav-link {{ Request::is('/*') ? 'active' : '' }}" aria-current="page" href="{{ url('/') }}">{{ __('messages.web.home') }}</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link {{ Request::is('medical-doctors*') ? 'active' : '' }}"
-                                   href="{{ route('medicalDoctors') }}">{{ __('messages.web.our_team') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link {{ Request::is('medical-services*') ? 'active' : '' }}"
-                                   href="{{ route('medicalServices') }}">{{ __('messages.web.services') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link {{ Request::is('medical-about-us*') ? 'active' : '' }}"
-                                   href="{{ route('medicalAboutUs') }}">{{ __('messages.web.about_us') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link {{ Request::is('medical-contact*') ? 'active' : '' }}"
-                                   href="{{ route('medicalContact') }}"
-                                   data-turbo="false">{{ __('messages.web.contact_us') }}</a>
-                            </li>
-
                             <li class="nav-item dropdown">
                                 <a href="javascript:void(0)" class="nav-link" id="dropdownMenuLink"
                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -77,8 +59,6 @@
                                     <a href="{{ route('login') }}"
                                        class="btn btn-outline-primary me-xxl-3 me-2 mb-3 mb-lg-0" data-turbo="false">{{ __('messages.login') }}</a>
                                 @endif
-
-                                    <a href="{{ route('medicalAppointment') }}" class="btn btn-primary mb-3 mb-lg-0">{{ __('messages.web.book_an_appointment') }}</a>
                         </div>
                     </div>
                 </nav>

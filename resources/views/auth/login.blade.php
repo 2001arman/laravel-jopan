@@ -5,7 +5,7 @@
 @section('content')
     <div class="d-flex flex-column flex-column-fluid align-items-center justify-content-center p-4">
         <div class="col-12 text-center">
-            <a href="{{ route('medical') }}" class="image mb-7 mb-sm-10">
+            <a href="{{ route('login') }}" class="image mb-7 mb-sm-10">
                 <img alt="Logo" src="{{ asset(getAppLogo()) }}" class="img-fluid" style="width:90px;">
             </a>
         </div>

@@ -41,7 +41,7 @@ Route::middleware('auth', 'xss', 'checkUserStatus')->group(function () {
     Route::put('/email-notification', [UserController::class, 'emailNotification'])->name('emailNotification');
 });
 
-Route::prefix('admin')->middleware('auth', 'xss', 'checkUserStatus', 'checkImpersonateUser', 'permission:manage_admin_dashboard')->group(function () {
+Route::prefix('admin')->middleware('auth')->group(function () {
     // Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
     Route::get('/dashboard', function(){
         return redirect(route('murid.index'));
@@ -49,7 +49,7 @@ Route::prefix('admin')->middleware('auth', 'xss', 'checkUserStatus', 'checkImper
 });
 
 
-Route::prefix('admin')->middleware('auth', 'xss', 'checkUserStatus')->group(function () {
+Route::prefix('admin')->middleware('auth')->group(function () {
 
     Route::resource('murid', MuridController::class)->parameters(['murids' => 'murid']);
     Route::resource('guru', GuruController::class)->parameters(['gurus' => 'guru']);

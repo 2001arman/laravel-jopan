@@ -309,13 +309,7 @@ function getStatusClassName($status)
  */
 function getSettingValue($key)
 {
-    static $setting;
-
-    if (empty($setting)) {
-        $setting = Setting::all()->keyBy('key');
-    }
-
-    return $setting[$key]->value;
+    return true;
 }
 
 /**
@@ -348,15 +342,7 @@ function getCurrencyIcon()
         $setting = Setting::all()->keyBy('key');
     }
 
-    static $currencies;
-
-    if (empty($currencies)) {
-        $currencies = Currency::all()->keyBy('id');
-    }
-
-    $currencyId = $setting['currency']->value;
-    $currency = $currencies[$currencyId];
-    $currencyIcon = $currency->currency_icon ?? '$';
+    $currencyIcon = '$';
 
     return $currencyIcon;
 }
@@ -404,8 +390,7 @@ function version()
 if (! function_exists('getNotification')) {
     function getNotification()
     {
-        return Notification::whereReadAt(null)->where('user_id',
-            getLogInUserId())->orderByDesc('created_at')->get();
+        return null;
     }
 }
 
