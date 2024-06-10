@@ -11,7 +11,6 @@
             @include('flash::message')
             <livewire:guru-table/>
         </div>
-        @include('medicines.show_modal')
     </div>
 @endsection
 @section('page_scripts')

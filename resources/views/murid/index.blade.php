@@ -11,7 +11,6 @@
             @include('flash::message')
             <livewire:murid-table/>
         </div>
-        @include('medicines.show_modal')
     </div>
 @endsection
 @section('page_scripts')
