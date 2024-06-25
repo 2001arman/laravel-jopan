@@ -1,6 +1,3 @@
-@php $styleCss = 'style' @endphp
-<div class="no-record text-center d-none">{{ __('messages.no_matching_records_found') }}</div>
-
 @can('manage_staff')
 <li class="nav-item {{ Request::is('admin/guru*') ? 'active' : '' }}">
     <a class="nav-link d-flex align-items-center py-4" aria-current="page" href="{{ route('guru.index') }}">

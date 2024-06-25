@@ -1,4 +1,4 @@
-w<div class="aside-menu-container" id="sidebar">
+<div class="aside-menu-container" id="sidebar">
     <div class="aside-menu-container__aside-logo flex-column-auto">
         <a href="{{ url('/') }}" class="text-decoration-none sidebar-logo" data-turbo="false" target="_blank">
             <img src="{{ asset(getAppLogo()) }}" alt="Logo" class="object-cover sidebar-app-logo"/>
