@@ -554,7 +554,6 @@ class User extends Authenticatable implements HasMedia
         'password' => 'required|same:password_confirmation|min:6',
         'dob' => 'nullable|date',
         'experience' => 'nullable|numeric',
-        'specializations' => 'required',
         'gender' => 'required',
         'status' => 'nullable',
         'postal_code' => 'nullable',
@@ -651,5 +650,10 @@ class User extends Authenticatable implements HasMedia
     public function gCredentials(): HasOne
     {
         return $this->hasOne(GoogleCalendarIntegration::class, 'user_id');
+    }
+
+    public function murid(): HasOne
+    {
+        return $this->hasOne(Murid::class, 'user_id');
     }
 }

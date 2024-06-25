@@ -43,7 +43,7 @@ class DefaultRoleSeeder extends Seeder
         $adminRole = Role::whereName('clinic_admin')->first();
 
         /** @var User $user */
-        $user = User::whereEmail('admin@unmul.com')->first();
+        $user = User::whereEmail('admin@politani.com')->first();
 
         $allPermission = Permission::pluck('name', 'id');
         $adminRole->givePermissionTo($allPermission);

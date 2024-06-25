@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Nilai;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Auth;
 use Rappasoft\LaravelLivewireTables\Views\Column;
 
 class NilaiTable extends LivewireTableComponent
@@ -54,6 +55,12 @@ class NilaiTable extends LivewireTableComponent
     public function builder(): Builder
     {
         /** @var Nilai $query */
-        return Nilai::select('nilais.*')->with(['kelas.mataPelajaran', 'kelas.guru', 'murid']);
+
+        $nilai = Nilai::with(['kelas.mataPelajaran', 'kelas.guru', 'murid']);
+        if(getLogInUser()->hasRole('patient')){
+            $user = Auth::user();
+            $nilai->where('id_murid', $user->murid->id);
+        }
+        return $nilai->select('nilais.*');
     }
 }

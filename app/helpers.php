@@ -102,7 +102,7 @@ function getDashboardURL()
             return 'doctors/dashboard';
         } else {
             if (Auth::user()->hasRole('patient')) {
-                return 'patients/dashboard';
+                return 'admin/nilai';
             }
         }
     }

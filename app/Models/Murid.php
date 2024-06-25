@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Murid extends Model
 {
@@ -16,6 +17,7 @@ class Murid extends Model
         'gender',
         'tanggal_lahir',
         'phone',
+        'user_id',
     ];
 
     public static $rules = [
@@ -28,5 +30,10 @@ class Murid extends Model
     public function nilai()
     {
         return $this->hasMany(Nilai::class, 'id_murid');
+    }
+
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'user_id');
     }
 }

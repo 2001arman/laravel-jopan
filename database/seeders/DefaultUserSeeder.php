@@ -24,7 +24,7 @@ class DefaultUserSeeder extends Seeder
                 'contact' => '1234567890',
                 'gender' => User::MALE,
                 'type' => User::ADMIN,
-                'email' => 'admin@polnes.com',
+                'email' => 'admin@politani.com',
                 'email_verified_at' => Carbon::now(),
                 'password' => Hash::make('123456'),
                 'region_code' => '91',
